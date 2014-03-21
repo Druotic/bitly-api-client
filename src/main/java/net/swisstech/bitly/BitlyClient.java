@@ -15,6 +15,7 @@
  */
 package net.swisstech.bitly;
 
+import net.swisstech.bitly.builder.v3.DataSearchRequest;
 import net.swisstech.bitly.builder.v3.ExpandRequest;
 import net.swisstech.bitly.builder.v3.InfoRequest;
 import net.swisstech.bitly.builder.v3.LinkClicksExpandedRequest;
@@ -53,6 +54,10 @@ public class BitlyClient {
 
 	public BitlyClient(String accessToken) {
 		this.accessToken = accessToken;
+	}
+
+	public DataSearchRequest dataSearch() {
+		return new DataSearchRequest(accessToken);
 	}
 
 	public ExpandRequest expand() {
