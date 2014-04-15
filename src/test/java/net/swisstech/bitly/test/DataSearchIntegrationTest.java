@@ -29,14 +29,12 @@ import org.testng.annotations.Test;
  * <p>
  * Please see the bit.ly documentation for the <a href="dev.bitly.com/data_apis.html#v3_search">/v3/search</a> request.
  * </p>
- * 
- * @author Patrick Huber (gmail: stackmagic)
  */
 public class DataSearchIntegrationTest extends AbstractBitlyClientIntegrationTest {
 
 	@Test
 	public void callDataSearch() {
-		Response<DataSearchResponse> resp = getClient().dataSearch() //
+		Response<DataSearchResponse> resp = getClient().dataSearch()
 				.setLimit("5")
 				.call();
 
